@@ -16,16 +16,20 @@ int main(){
 
             result = a*a*a+b*b*b+c*c*c;
             
-            if(result==i){
-                printf("%d ",result);
+            if(result==i && flag==0){
+                printf("%d",result);
                 flag = 1;
             }
-            
+            else if(result==i && flag!=0)
+                printf(" %d",result);            
         }
+
+        
 
         if(flag==0)
             printf("no\n");
-
+        else
+            printf("\n");
     }
 
     return 0;
