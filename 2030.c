@@ -1,24 +1,24 @@
 #include<stdio.h>
 #include<string.h>
+int main()
+{
+	char s[1000];
+	int i,j,n,m;
+	scanf("%d\n",&n);
+	while(n--)
+	{
+		m=0;
+		gets(s);
+		j=strlen(s);
+		for(i=0;i<j;i++)
+		{
+			if((s[i]<32)||(s[i]>126))
+				m++;
 
-int main(){
-    char c[1000];
-    int i,sum,j,n;
-
-    while(scanf("%d",&n)!=EOF){
-        for(i=0;i<n;i++){
-            gets_s(c);
-            sum = 0;
-            
-            for(j=0;j<strlen(c);j+=2){
-                if(c[j]>127)
-                    sum++;
-            }
-
-            printf("%d\n",sum);
-        }
-
-    }
-
+		}
+		printf("%d\n",(m+1)/2);
+		
+	}
+    
     return 0;
 }
