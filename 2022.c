@@ -4,9 +4,9 @@
 int main(){
     int m,n,x,y,s;
     int i,j,value;
-    
+    int score[1000][1000];    
+
     while(scanf("%d%d",&m,&n)!=EOF){
-        int score[m+1][n+1];
         value = 0;
 
         for(i=1;i<=m;i++)
