@@ -6,9 +6,6 @@ int main(){
     int i;
 
     while(gets(s)){
-        getchar();
-
-
         for(i=0;i<strlen(s);i++){
             if(i==0)
                 s[0] = s[0] - 32;
