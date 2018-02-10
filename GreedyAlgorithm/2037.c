@@ -27,6 +27,7 @@ int main(){
         for(i=0;i<n;i++)
             scanf("%d%d",&program[i].start,&program[i].end);
 
+        /*冒泡排序*/
         for(i=0;i<n;i++)
             for(j=0;j<n-i-1;j++)
                 if(program[j].end>program[j+1].end){
@@ -35,6 +36,7 @@ int main(){
                     program[j+1] = program[100];
                 }
 
+        /*求出最优解*/
         for(j=1,i=0,sum=1;j<n;j++)
             if(program[j].start >= program[i].end ){
                 i = j;
