@@ -3,7 +3,7 @@
 /*The relationship between three sides of a triangle:The sum of both sides is greater than the third,and the difference between the two sides is less than the third.*/
 int main(){
     int m;
-    int a,b,c;
+    double a,b,c;
 
     scanf("%d",&m);
     while(m--){
