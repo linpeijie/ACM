@@ -7,7 +7,7 @@ int main(){
 
     scanf("%d",&m);
     while(m--){
-        scanf("%d%d%d",&a,&b,&c);
+        scanf("%lf%lf%lf",&a,&b,&c);
 
         if(a+b>c && a+c>b && b+c>a && abs(a-b)<c && abs(a-c)<b && abs(b-c)<a)
             printf("YES\n");
