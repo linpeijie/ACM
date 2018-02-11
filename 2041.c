@@ -6,8 +6,8 @@ int main(){
     int i;
     
 
-    for(v[1]=0,i=2;i<41;i++){
-        v[i] = v[i-1]+1;
+    for(v[0]=1,v[1]=1,i=2;i<41;i++){
+        v[i] = v[i-1]+v[i-2];
     }
 
 
@@ -15,7 +15,7 @@ int main(){
     while(N--){
         scanf("%d",&M);
 
-        printf("%d\n",v[M]);
+        printf("%d\n",v[M-1]);
     }
 
     return 0;
