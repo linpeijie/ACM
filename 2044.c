@@ -2,11 +2,11 @@
 
 int main(){
     int N,a,b,i;
-    int sum[50];
+    long long sum[50];
 
     sum[0]=1;
     sum[1]=1;
-    for(i=1;i<50;i++)
+    for(i=2;i<55;i++)
         sum[i] = sum[i-1]+sum[i-2];
 
     scanf("%d",&N);
@@ -14,7 +14,7 @@ int main(){
     while(N--){
         scanf("%d%d",&a,&b);
         
-        printf("%d\n",sum[b-a-1]);
+        printf("%lld\n",sum[b-a]);
     }
 
     return 0;
