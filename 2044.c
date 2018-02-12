@@ -2,7 +2,7 @@
 
 int main(){
     int N,a,b,i;
-    long long sum[50];
+    long long sum[100];
 
     sum[0]=1;
     sum[1]=1;
