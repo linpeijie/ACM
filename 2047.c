@@ -2,11 +2,10 @@
 
 int main(){
     int n,i;
-    long long result[50];
+    long long result[50]={0,3,8};
 
-    result[1] = 3;
-    for(i=2;i<50;i++)
-        result[i] = result[i-1]*3-1;
+    for(i=3;i<50;i++)
+        result[i] = 2*(result[i-1]+result[i-2]);
 
     while(scanf("%d",&n)!=EOF){
         printf("%lld\n",result[n]);
