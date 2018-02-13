@@ -1,4 +1,5 @@
 #include<stdio.h>
+/*错排问题，或容错问题*/
 
 int main(){
     int c,n,i,sum=1;
