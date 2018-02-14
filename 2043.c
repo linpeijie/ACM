@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-
+/*注意至少要含有三种以上符号才是正确密码，所以要多添加一个条件句判断是否成立*/
 int main()
 {
 	int i,j,k,l,n,m,q;
