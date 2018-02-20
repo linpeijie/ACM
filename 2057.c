@@ -10,8 +10,9 @@ int stringToInt(char c[]){
         return c[0]-'A'+10;
 }
 
-int hToD(char h[]){
-    int i,sum,length;
+long long hToD(char h[]){
+    int i,length;
+    long long sum;
 
     sum = stringToInt(h);
     
@@ -25,12 +26,12 @@ int hToD(char h[]){
     }    
 }
 
-char dToH(int n){
+char dToH(long long n){
     if(n<16){
         if(n>=10)
             printf("%c",H[n-10]);
         else
-            printf("%d",n);
+            printf("%lld",n);
     }
     else{
         
@@ -39,14 +40,14 @@ char dToH(int n){
         if((n%16)>10)
             printf("%c",H[n%16-10]);
         else
-            printf("%d",n%16);
+            printf("%lld",n%16);
     }
 
 }
 
 int main(){
     char A[16],B[16];
-    int sum,a,b;
+    long long sum,a,b;
 
     while(scanf("%s %s",A,B)!=EOF){
         if(A[0]=='-')
