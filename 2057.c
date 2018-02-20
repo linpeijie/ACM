@@ -44,24 +44,27 @@ char dToH(int n){
 
 }
 
-int sumAB(char a[],char b[]){
-    if(a[0]=='+'&& b[0]=='+')
-        return hToD(a+1)+hToD(b+1);
-    else if(a[0]=='-'&& b[0]=='+')
-        return hToD(b+1)-hToD(a+1);
-    else if(a[0]=='+'&& b[0]=='-')
-        return hToD(a+1)-hToD(b+1);
-    else
-        return -(hToD(a+1)+hToD(b+1));
-}
-
 int main(){
     char A[16],B[16];
     int sum,a,b;
 
     while(scanf("%s %s",A,B)!=EOF){
-        sum = sumAB(A,B); 
-        
+        if(A[0]=='-')
+            a = -hToD(A+1);
+        else if(A[0]=='+')
+            a = hToD(A+1);
+        else
+            a = hToD(A);
+
+        if(B[0]=='+')
+            b = hToD(B+1); 
+        else if(B[0]=='-')
+            b = -hToD(B+1);
+        else
+            b = hToD(B);
+
+        sum = a+b;        
+
         if (sum<0){
             printf("-");
             dToH(-sum);
@@ -70,6 +73,5 @@ int main(){
             dToH(sum);
         printf("\n");
     }
-
     return 0;
 }
