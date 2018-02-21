@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-char H[15]={'1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+char H[16]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 
 int stringToInt(char c[]){
     if(c[0]>='0' && c[0]<='9')
@@ -37,7 +37,7 @@ char dToH(long long n){
         
         dToH(n/16);
        
-        printf("%c",H[n%16]-1);
+        printf("%c",H[n%16]);
     }
 
 }
