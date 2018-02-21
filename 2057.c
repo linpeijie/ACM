@@ -28,10 +28,7 @@ long long hToD(char h[]){
 
 char dToH(long long n){
     if(n<16){
-        if(n>=10)
-            printf("%c",H[n-10]);
-        else
-            printf("%lld",n);
+            printf("%c",H[n]);
     }
     else{
         
