@@ -7,7 +7,8 @@
 #### 1003 Max Sum  
 ```知识点：线性动态规划```
 #### 1089 Input&Output Practice
-```Java提交问题格式：类名必须为Main
+```
+   Java提交问题格式：类名必须为Main
    import java.util.Scanner; //格式化输入
    public class Main(){
        public static void main(String[] args){
