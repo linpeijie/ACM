@@ -17,12 +17,12 @@ class Main{
                 sum += n;
             }
 
-            if(N!=1)
+            N--;
+
+            if(N!=0)
                 System.out.printf("%d\n\n",sum);
             else
                 System.out.println(sum);
-
-            N--;
         }
     }
 }
