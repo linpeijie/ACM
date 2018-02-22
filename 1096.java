@@ -18,11 +18,19 @@ class Main{
             }
 
             N--;
-
+            
+            /*这里不能用： 
             if(N!=0)
                 System.out.printf("%d\n\n",sum);
             else
-                System.out.println(sum);
+                System.out.printf("%d\n",sum);
+            还不知道原因是什么
+            */
+            
+            System.out.println(sum);
+            
+            if(N!=0)
+                System.out.println();
         }
     }
 }
