@@ -6,14 +6,14 @@ class Main{
 
         int a,b;
 
-        a = scanf.nextInt();
-        b = scanf.nextInt();
-
-        while(a!=0 && b!=0){
-            System.out.println(a+b);
-
+        while(true){
             a = scanf.nextInt();
             b = scanf.nextInt();
+            
+            if(a==0&&b==0)
+                break;
+            else
+                System.out.println(a+b);
         }
     }
 }
