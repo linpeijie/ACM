@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<math.h>
-
+/*利用等差数列求和公式，先求出答案最大长度，然后再求出首项a1，最后反通过 首项a1和长度n求出末项an
+最后通过公式 Sn = n(a1+an)/2 输出答案 ； an = a1+(n-1)d
+*/
 
 int main(){
     long long N,M,n,a1;
