@@ -4,7 +4,7 @@ int main(){
     long a,b;
     int i,flag=0;
 
-    while(scanf("%ld%ld",&a,&b)!=EOF && (a!=0 && b!=0)){
+    while(scanf("%ld%ld",&a,&b),n,m){
         flag = 0;
         for(i=0;i<100;i++){
             if((i+a*100)%b == 0){
