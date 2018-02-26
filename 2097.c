@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+/*用递推在进制转换过程中计算出和，最后判断即可*/
 int countU(int n){
     if(n<10)
         return n;
