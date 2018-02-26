@@ -8,15 +8,15 @@ int main(){
         flag = 0;
         for(i=0;i<100;i++){
             if((i+a*100)%b == 0){
-                if(i==0)
-                    printf("00 ");
+                if(i<10){
+                    printf("0%d",i);
+                    flag =1;
+                }
+                else if(i>9 && flag ==1)
+                    printf(" %d",i);    
                 else{
-                    if(flag==0){
-                        printf("%d",i);
-                        flag = 1;
-                    }
-                    else
-                        printf(" %d",i);
+                    printf("%d",i);
+                    flag = 1;
                 }
             }
         }
