@@ -39,10 +39,6 @@ int main(){
             else
                 printf("%c\n",ch);
         }
-        if(flag2==1){
-            printf("\n");
-            flag2=0;
-        }
     } 
     return 0;
 }
