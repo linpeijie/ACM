@@ -13,14 +13,14 @@ int main(){
 
         for(i=-9999;i<10000;i++){
             if(i*(n-i)==m){
-                printf("YES\n");
+                printf("Yes\n");
                 flag = 1;
                 break;
             }
         }
 
         if(flag==0)
-            printf("NO\n");
+            printf("No\n");
     }
     return 0;
 }
