@@ -1,12 +1,17 @@
 #include<stdio.h>
 
 int main(){
-    int n,i,j,count;
+    int n,i,j,count,flag1=1,flag2=1;
     char ch;
 
     while(scanf("%c",&ch) && ch!='@'){
         scanf("%d",&n);
         getchar();
+
+        if(flag1==1)
+            flag1 = 0;
+        else
+            printf("\n");
 
         for(i=1;i<n;i++){
             count = 2*n-1;
@@ -34,7 +39,10 @@ int main(){
             else
                 printf("%c\n",ch);
         }
-        printf("\n");
+        if(flag2==1){
+            printf("\n");
+            flag2=0;
+        }
     } 
     return 0;
 }
