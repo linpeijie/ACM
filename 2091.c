@@ -4,7 +4,9 @@ int main(){
     int n,i,j,count;
     char ch;
 
-    while(scanf("%c%d",&ch,&n) && ch!='@'){
+    while(scanf("%c",&ch) && ch!='@'){
+        scanf("%d",&n);
+        getchar();
 
         for(i=1;i<n;i++){
             count = 2*n-1;
