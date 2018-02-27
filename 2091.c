@@ -1,44 +1,45 @@
 #include<stdio.h>
 
-int main(){
-    int n,i,j,count,flag1=1,flag2=1;
-    char ch;
+char ch;
 
-    while(scanf("%c",&ch) && ch!='@'){
-        scanf("%d",&n);
-        getchar();
-
-        if(flag1==1)
-            flag1 = 0;
-        else
-            printf("\n");
-
-        for(i=1;i<n;i++){
-            count = 2*n-1;
-            for(j=1;j<=count/2+1;j++){
-                if(j!=count/2+2-i)
-                    printf(" ");
-                else
-                    printf("%c",ch);
-            }
-
-            for(j=count/2;j<count;j++){
-                if(i!=1){
-                    if(j==count/2+i-2)
-                        printf("%c",ch);
-                    else
-                        printf(" ");
-                }                    
-            }
-            printf("\n"); 
-        }
-
-        for(i=1;i<=2*n-1;i++){
-            if(i!=2*n-1)
-                printf("%c",ch);
-            else
-                printf("%c\n",ch);
-        }
-    } 
-    return 0;
+void f1(int n)
+{
+	for(int i=1;i<=n;i++)
+		printf(" ");	
 }
+
+void f2(int n)
+{
+	if(n==1)
+		printf("%c",ch);
+	else
+	{
+		printf("%c",ch);
+		for(int i=1;i<=2*n-3;i++)
+			printf(" ");
+		printf("%c",ch);
+	}
+}
+
+
+int main()
+{
+	int n,flag=0;
+	while(scanf("%c %d",&ch,&n)!=EOF&&(ch!='@'))
+	{
+		getchar();       //吃掉回车符 
+		if(flag)	
+            printf("\n");      //除第一个图形之外，每个图形前都加一个空行 
+		for(int i=1;i<n;i++)
+		{
+			f1(n-i);   //输出前置空格 
+			f2(i);     //输出第一个字母到最后一个字母及中间空格 
+			printf("\n");
+		}
+		for(int i=1;i<=2*n-1;i++)    //输出最后一行 
+			printf("%c",ch);
+		printf("\n");
+		flag=1;
+	}
+	return 0;
+ }
