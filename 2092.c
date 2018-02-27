@@ -11,7 +11,7 @@ int main(){
 
         flag = 0;
 
-        for(i=0;i<sqrt(10000);i++){
+        for(i=-9999;i<10000;i++){
             if(i*(n-i)==m){
                 printf("YES\n");
                 flag = 1;
