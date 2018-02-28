@@ -16,7 +16,7 @@ int main(){
             low = preh + prel ;
         }
 
-        printf("%lld,%lld\n",high,low);
+        printf("%lld, %lld\n",high,low);
     }
     return 0;
 }
