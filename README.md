@@ -1,8 +1,8 @@
 #### 一些常用函数
 ```
 a.#include<string.h>
-  strlen(str);//return integer;
-  strcmp(str1,str2);//If equals,return 0;
+  strlen(str);            //return integer;
+  strcmp(str1,str2);      //If equals,return 0;
 ```
 
 #### 1000 A+B problem  
