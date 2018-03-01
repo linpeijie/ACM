@@ -1,7 +1,9 @@
 #### 一些常用函数
 ```
 a.#include<string.h>
-  strlen(str);            //return integer;
+  memset(str,0,sizeof(str));  //清空字符串或数组
+  strtok(str,char);        //字符串分割函数
+  strlen(str);            //return integer;
   strcmp(str1,str2);      //If equals,return 0;
 b.#include<math.h>
   1.反三角函数
