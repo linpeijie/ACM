@@ -6,42 +6,37 @@ typedef struct {
 }memory;
 
 int main(){
-    char sentence[9999],letter[100];
+    char sentence[2000],letter[100];
     int count,i,j,flag;
     memory m[1000];    
 
-    while(scanf("%s",sentence)){
-        if(!strcmp(sentence,"#"))
-            break;
-
+    while(gets(sentence) && strcmp(sentence,"#")){
+        j=0;
         count = 0;
-        flag = 1;
 
         for(i=0;i<strlen(sentence);i++){
+            flag = 1;
+            
             if(sentence[i]!=' ')
-                letter[j++]=sentence[i];
+                letter[j++] = sentence[i];
             else{
                 j=0;
-                printf("%s\n",letter);
-                for(i=0;i<count;i++){
-                    if(strcmp(letter,m[i].ch)){
+                memset(letter,0,sizeof(letter));
+                
+                for(j=0;j<count;j++)
+                    if(strcmp(m[j].ch,letter)){
                         flag = 0;
                         break;
-                    }   
-                }
+                    }
 
                 if(flag){
-                    strcpy(m[count].ch,letter);
-                    count+=1;
-                    printf("%d",count);
+                    strcpy(m[count++].ch,letter);
                 }
             }
 
-            flag = 1;
-
         }
-
-        printf("%d\n",count);
+        
+        printf("%d\n",count+1);
     }
     return 0;
 }
