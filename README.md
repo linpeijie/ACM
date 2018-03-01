@@ -3,6 +3,11 @@
 a.#include<string.h>
   strlen(str);            //return integer;
   strcmp(str1,str2);      //If equals,return 0;
+b.#include<math.h>
+  1.反三角函数
+    asin(double);acos(double);atan2(double y,double x);  //asin()*180/PI;
+  2.取绝对值
+    abs();fabs;labs();    //返回值不同
 ```
 
 #### 1000 A+B problem  
@@ -27,5 +32,5 @@ a.#include<string.h>
 #### 2054 精确大数计算
 ```知识点：精确大数计算，重点是判断小数点后的0，可以认为当两者差值足够小时即相等```
 
-### 2056 Rectangle
+#### 2056 Rectangle
 ```知识点：简单的作图思想，找特征，作图求解```
