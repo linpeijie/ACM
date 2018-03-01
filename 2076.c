@@ -8,11 +8,11 @@ int main(){
 
     while(scanf("%d",&T)!=EOF){
         while(T--){
-        scanf("%lf%lf%lf",&h,&m,&s);
+        scanf("%d%d%d",&h,&m,&s);
 
         h>=12?(h=h-12):h;
 
-        M = 6*(m+s/60);
+        M = 6*(m+1.0*s/60);
         H = 30*(h+(1.0*s/60+m)/60);
 
         angle = H-M;
