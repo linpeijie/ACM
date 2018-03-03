@@ -1,22 +1,16 @@
 #include<stdio.h>
-#include<string.h>
+#include<math.h>
+
 int main(){
-    int n,lamp[10000];
+    int n;
     int i,j;
 
-    memset(lamp,0,sizeof(lamp));
-
-    for(i=1;i<10001;i++)
-        for(j=i;j<10001;j++)
-            if(j%i == 0) {
-                if(lamp[j] == 1)
-                    lamp[j] = 0;
-                else
-                    lamp[j] = 1;
-            }
-
-    while(scanf("%d",&n)!=EOF){
-        printf("%d\n",lamp[n]);
+    while(scanf("%d",&n)!=EOF) {
+        if(sqrt(n*1.0) == (int)sqrt(n*1.0))
+            printf("1\n");
+        else
+            printf("0\n");
     }
+
     return 0;
 }
