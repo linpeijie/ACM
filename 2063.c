@@ -17,7 +17,7 @@ int main(){
 
     while(scanf("%d",&K),K) {
         scanf("%d%d",&M,&N);
-
+        memset(people,'\0',sizeof(people));
         while(K--) {
             scanf("%d%d",&A,&B);
             people[A][B] = 1;
@@ -39,7 +39,7 @@ int main(){
         count = max = 0;
         for(l = 1; l <= N; l++) {
             memset(m,0,sizeof(m));
-            max = 0;
+            
             if(people[1][l] == 1) {
                 m[l] = 1;
                 count = 1;
