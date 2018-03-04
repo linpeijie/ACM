@@ -38,9 +38,8 @@ int main(){
         
         count = max = 0;
         for(l = 1; l <= N; l++) {
-            if(count > max) 
-                max = count;
             memset(m,0,sizeof(m));
+            max = 0;
             if(people[1][l] == 1) {
                 m[l] = 1;
                 count = 1;
@@ -51,10 +50,13 @@ int main(){
                                 m[j] = 1;
                                 count++;
                                 break;
-                            } else continue;
+                            }
                         }
                     }
             } else continue;
+
+            if(count > max)
+                max = count;
         }
 
         printf("%d\n",max);
