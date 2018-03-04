@@ -40,15 +40,15 @@ int main(){
         for(l = 1; l <= N; l++) {
             if(count > max) 
                 max = count;
-            
+            memset(m,0,sizeof(m));
             if(people[1][l] == 1) {
                 m[l] = 1;
                 count = 1;
-                for(i = 1; i <= N; i++)
-                    for(j = 2; j <= M; j++) {
-                        if(people[j][i] == 1) {
-                            if(m[i] != 1) {
-                                m[i] = 1;
+                for(i = 2; i <= M; i++)
+                    for(j = 1; j <= N; j++) {
+                        if(people[i][j] == 1) {
+                            if(m[j] != 1) {
+                                m[j] = 1;
                                 count++;
                                 break;
                             } else continue;
