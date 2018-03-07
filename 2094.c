@@ -8,6 +8,7 @@ typedef struct name{
 
 int main(){
     int n,i,j,count;
+    char flag[100];
     name winer[1005];
     name loser[1005];
     
@@ -27,9 +28,11 @@ int main(){
             }
         }
 
+        memset(flag,'\0',sizeof(flag));
         for(i = 0; i < n; i++)
-            if(winer[i].lose == 0){
+            if(winer[i].lose == 0 && strcmp(flag,winer[i].str)){
                 count++;
+                strcpy(flag,winer[i].str);
             }
 
         if(count == 1)
