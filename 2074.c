@@ -15,6 +15,14 @@ int main(){
         if(flag)
             printf("\n");
 
+        if(n==1){
+            printf("%c\n",c);
+            continue;
+        } else if (n == 2){
+            printf("%c%c\n",e,e);
+            continue;
+        }
+
         if(((n/2)+1)%2 == 1 ){
             ch = c;
             c = e;
