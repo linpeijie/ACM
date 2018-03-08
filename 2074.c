@@ -15,6 +15,12 @@ int main(){
         if(flag)
             printf("\n");
 
+        if(((n/2)+1)%2 == 1 ){
+            ch = c;
+            c = e;
+            e = ch;
+        }    
+
         for(i = 1; i <= (n/2)+1; i++){
              for(j = 0; j < n; j++){
                  if((j < i || j > n-i-1 ) && j%2 == 0){
