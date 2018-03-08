@@ -1,64 +1,47 @@
+/*算法设计思想：一种是暴力输出，一行一行输出；另一种是作图思想，将其视为二维数组，先将图谱画出，再输出*/
+
 #include<stdio.h>
-#include<string.h>
-
-int main(){
-    int n,i,j;
-    int flag;
-    char c,e,ch;
-    char a[81][81];
-
-    flag = 0;
-    while(scanf("%d %c %c",&n,&c,&e)!=EOF){
+char pic[100][100];
+int main()
+{
+    int n,i,p,q,center,j,count=0;
+    char in,out;
+    while(scanf("%d %c %c",&n,&in,&out)!=EOF)
+    {
         getchar();
         
-        memset(a,'\0',sizeof(a));
-        if(flag)
+        if(count>0) 
             printf("\n");
-
-        if(n==1){
-            printf("%c\n",c);
-            continue;
-        } else if (n == 2){
-            printf("%c%c\n",e,e);
-            continue;
+        
+        i=1;
+        center=(n+1)/2;
+        pic[center][center]=in;//中心;
+        
+        while(center>=i+1)
+        {
+            p=center-i;
+            q=center+i;//顶点;
+            
+            for(j=0;j<2*i+1;j++)//填充次数;
+            {
+                pic[p][p+j]=i&1?out:in;//右;
+                pic[p+j][p]=i&1?out:in;//下;
+                pic[q][q-j]=i&1?out:in;//左;
+                pic[q-j][q]=i&1?out:in;//上;
+            }
+            i++;
         }
-
-        if(((n/2)+1)%2 == 1 ){
-            ch = c;
-            c = e;
-            e = ch;
-        }    
-
-        for(i = 1; i <= (n/2)+1; i++){
-             for(j = 0; j < n; j++){
-                 if((j < i || j > n-i-1 ) && j%2 == 0){
-                     if(i == 1 && (j == 0 || j == n-1)){
-                         printf(" ");
-                         ch = e;
-                         a[i][j] = ' ';
-                         continue;
-                     }
-                     printf("%c",e);
-                     ch = e;
-                     a[i][j] = e; 
-                 }
-                 else if((j < i || j > n-i) && j%2 == 1){
-                     printf("%c",c);
-                     ch = c;
-                     a[i][j] = c;
-                 }
-                 else{
-                     printf("%c",ch);
-                     a[i][j] = ch;
-                 }
-             }
-             printf("\n");
+        
+        if(n!=1)//n==1会把中心磨没;
+            pic[1][1]=' ',pic[1][n]=' ',pic[n][1]=' ',pic[n][n]=' ';//磨去四个角;
+        
+        for(i=1;i<=n;i++)
+        {
+            for(j=1;j<=n;j++)
+                printf("%c",pic[i][j]);
+            printf("\n");
         }
-
-        for(i = n/2; i > 0; i--)
-            printf("%s\n",a[i]);
-
-        flag = 1;
+        count++;
     }
     return 0;
 }
