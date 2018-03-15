@@ -1,14 +1,5 @@
-//
-//  1002.c
-//  acm
-//
-//  Created by  lpj on 18/1/1.
-//  Copyright © 2018年  lpj. All rights reserved.
-//
-
-#include "1002.h"
-
-void A1002(){
+#include<stdio.h>
+int main(){
     int T,lenga=0,lengb=0,len=0;
     char SA[1001],SB[1001];
     
@@ -51,5 +42,5 @@ void A1002(){
         if(i != T)                              //注意最后一个输出结尾不空行
             printf("\n");
     }
-    
+    return 0;
 }
