@@ -7,9 +7,9 @@ int main(){
     while(scanf("%ld%ld",&a,&b),n,m){
         flag = 0;
         for(i=0;i<100;i++){
-            if((i+a*100)%b == 0){
+            if((i+a*100)%b == 0){  
                 if(i<10){
-                    printf("0%d",i);
+                    printf("0%d",i);      //注意个位数的特殊情况
                     flag =1;
                 }
                 else if(i>9 && flag ==1)
